@@ -1,0 +1,17 @@
+# docker stack deploy -c docker-compose.yml bind9
+version: '3.5'
+
+services:
+
+  bind:
+    image: abilioesteves/bind9:0.0.1
+    ports:
+    - "53:53/udp"
+    - "53:53/tcp"
+    - "10000:10000/tcp"
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 2
+        window: 5s
