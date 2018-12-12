@@ -1,4 +1,5 @@
-# docker stack deploy -c docker-compose.yml bind9
+# docker stack deploy -c docker-compose.yml bind9 or 
+# docker-compose up -d
 version: '3.5'
 
 services:
@@ -9,9 +10,14 @@ services:
     - "53:53/udp"
     - "53:53/tcp"
     - "10000:10000/tcp"
+    volumes:
+      - data:/keys
     deploy:
       restart_policy:
         condition: on-failure
         delay: 5s
         max_attempts: 2
         window: 5s
+
+volumes:
+  data:
