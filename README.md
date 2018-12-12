@@ -4,7 +4,7 @@ A simple Bind9 server image with a test.com zone for testing purposes
 # Try it yourself
 Simply run the provided `docker-compose.yml` file with `docker-compose up` or even with `docker stack deploy`.
 
-After it's up and running, check it works by using the `nslookup` utility:
+After it's up and running, check if it works by using the `nslookup` utility:
 
 ```
 nslookup ns1.test.com <host ip>
@@ -17,7 +17,7 @@ Name:	ns1.test.com
 Address: 0.0.0.0
 ```
 
-Where `<host ip>` is the ip of the docker host that is running the bind9 instance. If you're running it local, it replace `<host ip>` with localhost:
+Where `<host ip>` is the IP address of the Docker Host that is running the BInd9 instance. If you're running it local, replace it with localhost:
 
 ```
 $ nslookup ns1.test.com localhost
