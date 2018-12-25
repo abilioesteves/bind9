@@ -1,4 +1,6 @@
 # bind9
+[![Docker Pulls](https://img.shields.io/docker/pulls/abilioesteves/bind9.svg)](https://hub.docker.com/r/abilioesteves/bind9)
+
 A simple Bind9 server image with a test.com zone for testing purposes
 
 # Try it yourself
